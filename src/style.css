@@ -1,0 +1,791 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.app {
+  background: HSL(75, 2%, 95%);
+}
+.day-time-svg {
+  background: rgb(219, 218, 218);
+}
+.night-time-svg {
+  background: rgb(126, 125, 125);
+}
+.night-time-sun {
+  display: none;
+}
+.day-time-stars {
+  display: none;
+}
+#sun {
+  stroke-width: 0.01em;
+  fill: HSL(45, 63%, 85%);
+}
+#buildingFront,
+#buildingRoof,
+#buildingSide,
+#buildingWindowOne,
+#buildingDoor,
+#BuildingBehind,
+#BuildingBehindFront,
+#BuildingBehindWindow,
+#BuildingStairsRight,
+#BuildingStairsLeft,
+#BuildingLeftTree,
+#BuildingParking,
+#BuildingBehindTallRight,
+#BuildingBehindTallRightWindow,
+#BuildingBehindTallRightWindow2,
+#BuildingBehindTallRightWindow3,
+#BuildingBehindTallRightWindow4,
+#BuildingBehindTallRightWindow5,
+#BuildingBehindTallRightWindow6,
+#BuildingBehindTallMiddle,
+#BuildingBehindTallMiddleWindow1,
+#BuildingBehindTallMiddleWindow2,
+#BuildingBehindTallLeft,
+#BuildingBehindTallLeftWindow1,
+#BuildingBehindTallLeftWindow2,
+#BuildingBehindTallLeftWindow3,
+#BuildingBehindTallLeftWindow4,
+#BuildingBehindTallLeftWindow5,
+#BuildingBehindTallLeftWindow6,
+#BuildingBehindTallLeftWindow7,
+#BuildingBehindTallLeftWindow8,
+#BuildingBehindTallLeftWindow9,
+#StopSign1,
+#StopSign2,
+#StopSign1Dash1,
+#StopSign2Dash1,
+#StairRightHand,
+#StairLeftHand {
+  stroke-width: 0.01em;
+  stroke: rgb(90, 90, 90);
+}
+#buildingLeftHandle,
+#buildingRightHandle {
+  stroke-width: 0.05em;
+  stroke: black;
+}
+#buildingSign,
+#circleSign {
+  stroke-width: 0.01em;
+  stroke: #ffffff;
+}
+#BuildingLeftRoadYellowLine,
+#BuildingRightRoadYellowLine {
+  stroke-width: 0.01em;
+  stroke: HSL(45, 74%, 58%);
+}
+
+#BigTree,
+#BigTreeLeaf {
+  stroke-width: 0.01em;
+  stroke: rgb(105, 104, 104);
+}
+
+.day-cloud {
+  stroke-width: 0.01em;
+  fill: HSL(131, 1%, 92%);
+  stroke: HSL(131, 1%, 72%);
+}
+.night-cloud {
+  stroke-width: 0.01em;
+  fill: HSL(131, 1%, 52%);
+  stroke: HSL(131, 1%, 52%);
+}
+
+#StairStep1,
+#StairStep2,
+#StairStep3,
+#StairStep4,
+#StairStep5 {
+  stroke-width: 0.04em;
+  stroke: HSL(131, 1%, 32%);
+}
+
+.inside-svg-div {
+  text-align: center;
+}
+.title {
+  font-size: 1.3em;
+  font-family: fantasy;
+}
+.titleDr {
+  margin: 0.5em 0;
+  font-size: 0.8em;
+}
+.more-button {
+  font-size: 0.5em;
+  border: 1px solid white;
+  border-radius: 0.1em;
+  padding: 0.3em;
+  background-color: HSL(131, 58%, 40%);
+  color: white;
+  font-family: fantasy;
+}
+.more-button:hover {
+  color: HSL(131, 58%, 40%);
+  background-color: white;
+  border: 1px solid HSL(131, 58%, 40%);
+}
+/*mobile*/
+/*Nav bar*/
+.navbar {
+  display: none;
+  top: 0;
+  margin-top: -0.2em;
+  width: 100%;
+  height: 5em;
+  position: sticky;
+  background-color: HSL(120, 2%, 17%);
+  color: white;
+}
+.fas {
+  font-size: 0.9em;
+}
+.navbar ul {
+  list-style: none;
+  font-size: 2.3em;
+  text-align: center;
+}
+.navbar ul li {
+  display: inline-block;
+  margin: 0.5em 2em;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+.navbar ul li a:hover {
+  cursor: pointer;
+  color: rgb(226, 110, 32);
+}
+/*services*/
+.services {
+  margin-top: -0.2em;
+  padding-top: 6em;
+  width: 100%;
+  text-align: center;
+  background: HSL(202, 29%, 49%);
+}
+.services-title {
+  font-family: fantasy;
+  font-size: 3em;
+  color: HSL(240, 2%, 98%);
+}
+.services-boxes {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.services-box {
+  width: 91%;
+  height: 20em;
+  margin: 1em 1rem 1rem 1rem;
+}
+.services-box-image {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+  transition: transform 0.2s ease-out;
+}
+.services-box-image:hover {
+  transform: scale(1.1);
+}
+.services-box-name {
+  font-size: 2em;
+  margin-top: 0.5em;
+  color: HSL(240, 2%, 98%);
+}
+/*about*/
+.about {
+  padding-top: 6em;
+  width: 100%;
+  text-align: justify;
+  background: HSL(202, 29%, 49%);
+}
+.about-title {
+  font-family: fantasy;
+  font-size: 2.3em;
+  color: HSL(240, 2%, 98%);
+  text-align: center;
+}
+.about-wrapper {
+  width: 100%;
+}
+.about-circle-image {
+  float: left;
+  width: 20em;
+  height: 20em;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: 1em 1em;
+}
+.about-text {
+  margin: 0em 1em;
+  font-size: 1.4em;
+  line-height: 1.7em;
+  color: HSL(240, 2%, 98%);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#about-svg {
+  margin-top: 0em;
+}
+/*certified*/
+.certified {
+  margin-top: 6em;
+  width: 100%;
+  text-align: center;
+}
+.certify-title {
+  font-family: fantasy;
+  font-size: 2.3em;
+}
+.certify-boxes {
+  margin-top: -1.5em;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+.certify-box {
+  width: 91%;
+  height: 17em;
+  margin: 1em;
+}
+
+.certify-box-image {
+  width: 100%;
+  height: 80%;
+  margin-top: -0.3em;
+  object-fit: cover;
+}
+#line-svg {
+  display: none;
+}
+#line {
+  fill: transparent;
+}
+.hanger {
+  stroke-width: 0.03em;
+  stroke: HSL(202, 29%, 49%);
+  fill: HSL(202, 29%, 49%);
+}
+/*address*/
+.address {
+  margin-top: 10em;
+  width: 100%;
+  height: 55em;
+}
+.address-title {
+  font-family: fantasy;
+  font-size: 2.3em;
+}
+.address-wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.address-map {
+  width: 100%;
+  height: 35em;
+  background: rgb(243, 243, 243);
+  object-fit: cover;
+}
+.address-tel {
+  width: 100%;
+  background: HSL(202, 29%, 49%);
+}
+.address-phone {
+  display: block;
+  font-size: 2em;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin: 1em;
+}
+.address-num {
+  font-size: 2em;
+  text-align: center;
+  margin: 1em;
+  color: white;
+}
+.address-num a {
+  text-decoration: none;
+  color: white;
+}
+.address-num a:hover {
+  color: HSL(200, 79%, 84%);
+}
+
+/*Footer*/
+.footer {
+  margin-top: 15em;
+  width: 100%;
+  background: HSL(120, 2%, 17%);
+  display: flex;
+  flex-flow: row wrap;
+  color: white;
+}
+
+.left-footer {
+  width: 100%;
+  text-align: center;
+}
+.footer-place {
+  font-size: 2.2em;
+  margin: 2em;
+  font-family: fantasy;
+}
+.footer-name {
+  font-size: 1.95em;
+  font-family: fantasy;
+}
+.right-footer {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: monospace;
+}
+.right-footer-h1 {
+  font-family: fantasy;
+  margin-top: 2em;
+  font-size: 2.5em;
+}
+.right-footer-ul {
+  list-style-type: none;
+  font-size: 1.8em;
+}
+.right-footer-ul-li {
+  margin: 0.3em;
+}
+.footer-phone {
+  display: block;
+  font-size: 1.8em;
+  color: white;
+  text-decoration: none;
+  width: 10em;
+  margin: 1.5em auto;
+}
+
+/*tablet*/
+@media only screen and (min-width: 481px) and (max-width: 760px) {
+  /*Nav bar*/
+  .navbar {
+    top: 0;
+    margin-top: -0.2em;
+    width: 100%;
+    height: 5em;
+    position: sticky;
+    background-color: HSL(120, 2%, 17%);
+    color: white;
+  }
+  .fas {
+    font-size: 0.9em;
+  }
+  .navbar ul {
+    list-style: none;
+    font-size: 2.3em;
+    text-align: center;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin: 0.5em 2em;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .navbar ul li a:hover {
+    cursor: pointer;
+    color: rgb(226, 110, 32);
+  }
+  /*services*/
+  .services-title {
+    font-family: fantasy;
+    font-size: 2.3em;
+    color: HSL(240, 2%, 98%);
+  }
+  .services-box {
+    width: 98%;
+    height: 22em;
+    margin: 1%;
+  }
+  /*about*/
+  .about-title {
+    font-family: fantasy;
+    font-size: 2.3em;
+    color: HSL(240, 2%, 98%);
+  }
+  .about-circle-image {
+    float: left;
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 1em 1em;
+    shape-outside: circle(45%);
+  }
+  /*certified*/
+  .certified {
+    margin-top: 6em;
+    width: 100%;
+  }
+  .certify-title {
+    font-family: fantasy;
+    font-size: 2.6em;
+  }
+
+  .certify-box {
+    width: 98%;
+    height: 25em;
+    margin: 1%;
+    margin-top: 2.2em;
+  }
+}
+/*laptop*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /*Nav bar*/
+  .navbar {
+    display: block;
+    top: 0;
+    margin-top: -0.2em;
+    width: 100%;
+    height: 5em;
+    position: sticky;
+    background-color: HSL(120, 2%, 17%);
+    color: white;
+  }
+  .fas {
+    font-size: 0.9em;
+  }
+  .navbar ul {
+    list-style: none;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin: 1.1em 1em;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .navbar ul li a:hover {
+    cursor: pointer;
+    color: rgb(226, 110, 32);
+  }
+  /*services*/
+  .services-title {
+    font-family: fantasy;
+    font-size: 2.3em;
+    color: HSL(240, 2%, 98%);
+  }
+  .services-box {
+    width: 48%;
+    height: 22em;
+    margin: 1%;
+  }
+
+  .services-boxes {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  /*about*/
+  .about-title {
+    font-family: fantasy;
+    font-size: 2.3em;
+    color: HSL(240, 2%, 98%);
+  }
+  .about-circle-image {
+    float: left;
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 1em 1em;
+    shape-outside: circle(45%);
+  }
+  /*certified*/
+  .certify-boxes {
+    margin-top: -1.5em;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+  }
+  .certified {
+    margin-top: 6em;
+    width: 100%;
+  }
+  .certify-title {
+    font-family: fantasy;
+    font-size: 2.6em;
+  }
+
+  .certify-box {
+    width: 48%;
+    height: 25em;
+    margin: 1%;
+    margin-top: 2.2em;
+  }
+}
+/*big screen*/
+@media only screen and (min-width: 1040px) {
+  /*Nav bar*/
+  .navbar {
+    display: block;
+    top: 0;
+    margin-top: -0.2em;
+    width: 100%;
+    height: 5em;
+    position: sticky;
+    background-color: HSL(120, 2%, 17%);
+    color: white;
+  }
+  .fas {
+    font-size: 0.9em;
+  }
+  .navbar ul {
+    list-style: none;
+    font-size: 2.3em;
+    text-align: center;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin: 0.5em 2em;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .navbar ul li a:hover {
+    cursor: pointer;
+    color: rgb(226, 110, 32);
+  }
+  /*services*/
+  .services {
+    margin-top: -0.2em;
+    padding-top: 6em;
+    width: 100%;
+    height: 55em;
+    text-align: center;
+    background: HSL(202, 29%, 49%);
+  }
+  .services-title {
+    font-family: fantasy;
+    font-size: 4em;
+    color: HSL(240, 2%, 98%);
+  }
+  .services-boxes {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+  }
+  .services-box {
+    width: 25%;
+    height: 45%;
+    margin: 1em 2rem 1rem 3rem;
+  }
+  .services-box-image {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    transition: transform 0.2s ease-out;
+  }
+  .services-box-image:hover {
+    transform: scale(1.1);
+  }
+  .services-box-name {
+    font-size: 2em;
+    margin-top: 0.5em;
+    color: HSL(240, 2%, 98%);
+  }
+  /*about*/
+  .about {
+    padding-top: 6em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: HSL(202, 29%, 49%);
+  }
+  .about-title {
+    font-family: fantasy;
+    font-size: 4em;
+    color: HSL(240, 2%, 98%);
+  }
+  .about-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: 90%;
+  }
+  .about-circle-image {
+    float: left;
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 0em 1em;
+    shape-outside: circle(48%);
+  }
+  .about-text {
+    font-size: 1.8em;
+    line-height: 1.7em;
+    color: HSL(240, 2%, 98%);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  #about-svg {
+    margin-top: 0em;
+  }
+  /*certified*/
+  .certified {
+    padding-top: 10em;
+    width: 100%;
+    height: 40em;
+  }
+  .certify-title {
+    font-family: fantasy;
+    font-size: 4em;
+  }
+  .certify-boxes {
+    margin-top: -1.5em;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+  }
+  .certify-box {
+    width: 23%;
+    height: 100%;
+    margin: 1.25em 1em;
+  }
+
+  .certify-box-image {
+    width: 100%;
+    height: 80%;
+    margin-top: -0.3em;
+    object-fit: cover;
+  }
+
+  .hanger {
+    stroke-width: 0.03em;
+    stroke: HSL(202, 29%, 49%);
+    fill: transparent;
+  }
+  #line-svg {
+    display: block;
+  }
+  #line {
+    stroke-width: 0.06em;
+    stroke: HSL(202, 29%, 49%);
+  }
+  /*address*/
+  .address {
+    padding-top: 5em;
+    width: 100%;
+    height: 55em;
+  }
+  .address-title {
+    font-family: fantasy;
+    font-size: 4em;
+  }
+  .address-wrapper {
+    width: 100%;
+    height: 91%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .address-map {
+    width: 50%;
+    height: 100%;
+    background: rgb(243, 243, 243);
+    object-fit: cover;
+  }
+  .address-tel {
+    width: 50%;
+    height: 100%;
+    background: HSL(202, 29%, 49%);
+  }
+  .address-phone {
+    display: block;
+    font-size: 4em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin: 2em;
+  }
+  .address-num {
+    font-size: 3em;
+    text-align: center;
+    margin: 3em;
+    color: white;
+  }
+  .address-num a {
+    text-decoration: none;
+    color: white;
+  }
+  .address-num a:hover {
+    color: HSL(200, 79%, 84%);
+  }
+
+  /*Footer*/
+  .footer {
+    margin-top: 20em;
+    width: 100%;
+    height: 25em;
+    background: HSL(120, 2%, 17%);
+    display: flex;
+    color: white;
+  }
+
+  .left-footer {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+  }
+  .footer-place {
+    font-size: 2.5em;
+    margin: 2em;
+    font-family: fantasy;
+  }
+  .footer-name {
+    font-size: 1.95em;
+    font-family: fantasy;
+  }
+  .right-footer {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-family: monospace;
+  }
+  .right-footer-h1 {
+    font-family: fantasy;
+    margin-top: 2em;
+    font-size: 2.5em;
+  }
+  .right-footer-ul {
+    list-style-type: none;
+    font-size: 1.8em;
+  }
+  .right-footer-ul-li {
+    margin: 0.3em;
+  }
+  .footer-phone {
+    display: block;
+    font-size: 1.8em;
+    color: white;
+    text-decoration: none;
+    width: 10em;
+    margin: 1.5em auto;
+  }
+}
